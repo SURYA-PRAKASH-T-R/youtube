@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+</head>
+<body>
+
+    <mat-toolbar  style="display: flex;justify-content: space-between;text-align: center;background-color: white;">
+        <div>
+            <button mat-icon-button ><mat-icon>menu</mat-icon></button> <img src="..\assets\Youtube-logo.png" style="width: 80px;">
+        </div>
+        <div style="display: flex;align-items: center;">
+            <input  type="search"  style="background-color: white; width: 450px;display: flex; height: 35px;border-style: solid;padding-left: 5px;border-width: 1px;border-top-left-radius: 15px;border-bottom-left-radius: 15px;">
+            <button mat-stroked-button style="margin-left: 0px;border-top-right-radius: 15px;border-bottom-right-radius: 15px;height: 35px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-width: 1.5px;"><mat-icon>search</mat-icon></button>
+            <button mat-icon-button><mat-icon>microphone</mat-icon></button>
+        </div>
+        <div>
+            <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
+            <button mat-icon-button><mat-icon>account_circle</mat-icon></button>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container>
+        <mat-sidenav opened mode="side">
+            <mat-nav-list style="display: flex;flex-direction: column; width: 200px;">
+                <a routerLink='home' mat-list-item  style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">home</mat-icon><div style="display: inline-flex;">Home</div>
+                </a>
+                <a routerLink="shorts" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">whatshot</mat-icon><div style="display: inline-flex;">Shorts</div>
+                </a>
+                <a routerLink="subscription" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">subscriptions</mat-icon><div style="display: inline-flex;">Subscriptions</div>
+                </a>
+                <button style="border-top: none;border-left: none;border-right: none;border-bottom: 0.80px;box-shadow: 0,0,0,0.1;"></button>
+                <a routerLink="library" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">video_library</mat-icon><div style="display: inline-flex;">Library</div>
+                </a>
+                <a routerLink="history" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">history</mat-icon><div style="display: inline-flex;">History</div>
+                </a>
+                <a routerLink="watchlater" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">watch_later</mat-icon><div style="display: inline-flex;">Watch Later</div>
+                </a>
+                <a routerLink="likedvideo" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">thumb_up</mat-icon><div style="display: inline-flex;">Liked Video</div>
+                </a>
+                <button style="border-top: none;border-left: none;border-right: none;border-bottom: 0.80px;box-shadow: 0,0,0,0.1;"></button>
+                <mat-label style="margin-left: 25px;margin-top: 20px;" >Trending</mat-label>
+                <a routerLink="trending" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">whatshot</mat-icon><div style="display: inline-flex;">trending</div>
+                </a>
+                <a routerLink="music" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">music_notes</mat-icon><div style="display: inline-flex;">Music</div>
+                </a>
+                <a routerLink="trending" mat-list-item style="display: flex;">
+                    <mat-icon style="margin-right: 10px;margin-left: 10px;margin-bottom: -4px;">whatshot</mat-icon><div style="display: inline-flex;">trending</div>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <p style="height: 88vh;">
+                <router-outlet></router-outlet>
+            </p>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    
+</body>
+</html>

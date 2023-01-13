@@ -1,0 +1,30 @@
+.llikeit {
+    display: flex;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.i_like_it {
+    display: block;
+    border-radius: 7px;
+}
+.llikeit .i_like_it {
+    display: flex;
+    margin-left: -7px;
+    opacity: 0;
+    margin-top: 7px;
+    background-color: gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.llikeit:hover .i_like_it {
+    opacity: 1;
+}
